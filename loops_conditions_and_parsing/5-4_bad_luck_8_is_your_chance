@@ -1,0 +1,23 @@
+#!/usr/bin/env bash
+#printing Best School 10 times, good luck and bad luck
+i=1
+
+while [ "$i" -le 10 ]
+do
+      
+ #printing bad luck for the 4th iteration
+
+ if [ "$i" -eq 4 ]
+ then
+    echo "bad luck"
+ #printing good luck for the 8th iteration   
+ elif [ "$i" -eq 8 ]
+ then
+     echo "good luck"
+ else
+     echo "Best School"
+ fi
+
+
+ ((i++))
+done

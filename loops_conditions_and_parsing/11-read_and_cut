@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+#printing file /etc/passwd f1, f3 and f6
+
+
+while IFS=: read -r f1 f3 f6
+do
+echo "$f1 $f3 $f6"
+done< /etc/passwd
