@@ -1,0 +1,14 @@
+#!/usr/bin/env bash
+#creating a file that contains this process pid
+
+echo "pgrep /var/run/myscript.pid"> /var/run/myscript.pid
+trap "Y U no love me?!" SIGINT
+
+tempfile=/var/run/myscript.pid
+
+trap 'echo "I hate the kill command"; rm -f $tempfile; exit' SIGQUIT SIGTERM
+
+while :
+do 
+echo "To infinity and beyond"
+done
